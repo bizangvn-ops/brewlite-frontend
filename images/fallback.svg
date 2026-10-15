@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Không có ảnh">
+  <rect width="400" height="300" fill="#f3e9df"/>
+  <g fill="none" stroke="#6f4e37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 120h130v70a55 55 0 0 1-55 55h-20a55 55 0 0 1-55-55z"/>
+    <path d="M250 135h25a28 28 0 0 1 0 56h-25"/>
+    <path d="M150 95c0-14 14-14 14-28M185 95c0-14 14-14 14-28M220 95c0-14 14-14 14-28"/>
+  </g>
+  <text x="200" y="278" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#6f4e37">BrewLite</text>
+</svg>

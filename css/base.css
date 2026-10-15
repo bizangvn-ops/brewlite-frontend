@@ -1,0 +1,120 @@
+/* ============================================================
+   BrewLite — web tĩnh Menu (Task 3) + Lịch sử đơn (Task 9)
+   Mobile-first, 360px → desktop
+   ============================================================ */
+
+:root {
+  --brew-brown: #6f4e37;
+  --brew-brown-dark: #55392a;
+  --brew-cream: #faf6f1;
+  --brew-accent: #c98a53;
+  --brew-text: #2d241e;
+  --brew-muted: #8a7a6d;
+  --brew-card: #ffffff;
+  --brew-border: #ece2d7;
+  --shadow-card: 0 1px 3px rgba(45, 36, 30, 0.08), 0 4px 14px rgba(45, 36, 30, 0.06);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--brew-cream);
+  color: var(--brew-text);
+  line-height: 1.5;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--brew-brown);
+  color: #fff;
+}
+
+.site-header__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+.logo__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--brew-accent);
+  font-size: 1.1rem;
+}
+
+.site-nav { display: flex; align-items: center; gap: 0.25rem; }
+
+.site-nav a {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.site-nav a:hover { opacity: 1; background: rgba(255, 255, 255, 0.12); }
+.site-nav a.is-active { opacity: 1; background: rgba(255, 255, 255, 0.18); }
+
+.cart-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.35rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--brew-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ---------- Layout ---------- */
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3.5rem;
+}
+
+.page-title { margin: 0.25rem 0 0.15rem; font-size: 1.6rem; font-weight: 800; }
+
+.page-subtitle { margin: 0 0 1.25rem; color: var(--brew-muted); font-size: 0.95rem; }
+
+.site-footer {
+  border-top: 1px solid var(--brew-border);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  color: var(--brew-muted);
+  font-size: 0.85rem;
+}

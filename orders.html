@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrewLite — Đơn của tôi</title>
+  <meta name="description" content="Lịch sử đơn hàng BrewLite: mã đơn, thời gian, trạng thái, chi tiết món." />
+  <link rel="icon" href="images/fallback.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <link rel="stylesheet" href="css/orders.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="BrewLite — trang chủ">
+        <span class="logo__mark" aria-hidden="true">☕</span>
+        BrewLite
+      </a>
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a href="index.html">Menu</a>
+        <a href="orders.html" class="is-active" aria-current="page">Đơn của tôi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1 class="page-title">Đơn của tôi</h1>
+    <p class="page-subtitle">Nhấn vào đơn để xem chi tiết các món đã đặt.</p>
+
+    <section id="orders-content" aria-live="polite" aria-busy="true"></section>
+  </main>
+
+  <footer class="site-footer">
+    BrewLite · Đồ uống &amp; ăn vặt — Demo frontend (Task 3 + Task 9)
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/orders.js"></script>
+</body>
+</html>

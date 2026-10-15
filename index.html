@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrewLite — Menu</title>
+  <meta name="description" content="Menu BrewLite: 10 món nước và 5 món ăn vặt." />
+  <link rel="icon" href="images/fallback.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <link rel="stylesheet" href="css/orders.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="BrewLite — trang chủ">
+        <span class="logo__mark" aria-hidden="true">☕</span>
+        BrewLite
+      </a>
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a href="index.html" class="is-active" aria-current="page">Menu</a>
+        <a href="orders.html">Đơn của tôi</a>
+        <span class="cart-pill" id="cart-count" title="Số món trong giỏ (demo)">
+          🛒 <span id="cart-count-value">0</span>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1 class="page-title">Menu đồ uống &amp; ăn vặt</h1>
+    <p class="page-subtitle">10 món nước · 5 món ăn vặt — bấm <strong>+</strong> để thêm nhanh vào giỏ (size M).</p>
+
+    <div class="toolbar">
+      <div class="search">
+        <span class="search__icon" aria-hidden="true">🔍</span>
+        <label class="visually-hidden" for="search-input">Tìm món</label>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Tìm món… (vd: ca phe, tra dao)"
+          autocomplete="off"
+        />
+        <button class="search__clear" id="search-clear" type="button" aria-label="Xóa từ khóa" hidden>×</button>
+      </div>
+      <div class="category-filter" id="category-filter" role="group" aria-label="Lọc theo danh mục"></div>
+    </div>
+
+    <section id="menu-content" aria-live="polite" aria-busy="true"></section>
+  </main>
+
+  <footer class="site-footer">
+    BrewLite · Đồ uống &amp; ăn vặt — Demo frontend (Task 3 + Task 9)
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@ window.BREW_DATA = {
     { id: 'p06', name: 'Cà phê muối',     price: 42000, imageUrl: 'images/ca-phe-muoi.png', stock: 0,  category: 'Cà phê',             description: 'Kem mặn phô mai trên lớp cà phê — hết hàng hôm nay.' },
     { id: 'p07', name: 'Trà đào cam sả',  price: 39000, imageUrl: 'images/tra-dao.jpg',  stock: 30, category: 'Trà',                 description: 'Đào giòn, cam vàng, sả thơm.' },
     { id: 'p08', name: 'Trà sữa trân châu', price: 35000, imageUrl: 'images/tra-sua.jpg', stock: 22, category: 'Trà',                description: 'Trà đen sữa, trân châu dẻo.' },
-    { id: 'p09', name: 'Sinh tố bơ',      price: 45000, imageUrl: 'images/sinh-to-bo.jpg', stock: 10, category: 'Sinh tố & Nước ép', description: 'Bơ chín xay mịn, béo ngậy.' },
+    { id: 'p09', name: 'Sinh tố bơ',      price: 45000, imageUrl: 'images/sinh-to-bo-new.jpg', stock: 10, category: 'Sinh tố & Nước ép', description: 'Bơ chín xay mịn, béo ngậy.' },
     { id: 'p10', name: 'Nước cam ép',     price: 30000, imageUrl: 'images/nuoc-cam.jpg', stock: 16, category: 'Sinh tố & Nước ép',   description: 'Cam tươi ép trong ngày.' },
 
     // ——— 5 món ăn vặt ———

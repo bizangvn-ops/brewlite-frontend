@@ -3,58 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BrewLite — Menu</title>
-  <meta name="description" content="Menu BrewLite: 10 món nước và 5 món ăn vặt." />
+  <title>BrewLite — Thực đơn đồ uống &amp; ăn vặt</title>
+  <meta name="description" content="Khám phá 15 món đồ uống và ăn vặt của BrewLite. Tìm kiếm, lọc theo danh mục và thêm nhanh vào giỏ." />
+  <meta name="theme-color" content="#f7f1e8" />
   <link rel="icon" href="images/fallback.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/menu.css" />
   <link rel="stylesheet" href="css/orders.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
   <header class="site-header">
     <div class="site-header__inner">
       <a class="logo" href="index.html" aria-label="BrewLite — trang chủ">
-        <span class="logo__mark" aria-hidden="true">☕</span>
-        BrewLite
-      </a>
-      <nav class="site-nav" aria-label="Điều hướng chính">
-        <a href="index.html" class="is-active" aria-current="page">Menu</a>
-        <a href="orders.html">Đơn của tôi</a>
-        <span class="cart-pill" id="cart-count" title="Số món trong giỏ (demo)">
-          🛒 <span id="cart-count-value">0</span>
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 8h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V8Z" />
+            <path d="M16 9h1.8a3 3 0 0 1 0 6H16" />
+            <path d="M8 3v2M12 3v2" />
+          </svg>
         </span>
+        <span class="logo__text">
+          BrewLite
+          <span class="logo__tag">Coffee &amp; Snacks</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a href="index.html" class="nav-link is-active" aria-current="page">Thực đơn</a>
+        <a href="orders.html" class="nav-link">Đơn của tôi</a>
+        <button class="cart-btn" type="button" data-cart-open aria-haspopup="dialog" aria-label="Mở giỏ hàng">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 4h2l2.3 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6" />
+            <circle cx="10" cy="20" r="1.3" />
+            <circle cx="18" cy="20" r="1.3" />
+          </svg>
+          <span class="cart-btn__label">Giỏ</span>
+          <span class="cart-btn__count" data-cart-count>0</span>
+        </button>
       </nav>
     </div>
   </header>
 
-  <main class="page">
-    <h1 class="page-title">Menu đồ uống &amp; ăn vặt</h1>
-    <p class="page-subtitle">10 món nước · 5 món ăn vặt — bấm <strong>+</strong> để thêm nhanh vào giỏ (size M).</p>
+  <main class="page" id="main">
+    <section class="menu-hero" aria-labelledby="hero-title">
+      <span class="menu-hero__glow" aria-hidden="true"></span>
+      <span class="liquid-blob liquid-blob--a" aria-hidden="true"></span>
+      <span class="liquid-blob liquid-blob--b" aria-hidden="true"></span>
 
-    <div class="toolbar">
-      <div class="search">
-        <span class="search__icon" aria-hidden="true">🔍</span>
-        <label class="visually-hidden" for="search-input">Tìm món</label>
-        <input
-          id="search-input"
-          type="search"
-          placeholder="Tìm món… (vd: ca phe, tra dao)"
-          autocomplete="off"
-        />
-        <button class="search__clear" id="search-clear" type="button" aria-label="Xóa từ khóa" hidden>×</button>
+      <div class="menu-hero__content">
+        <span class="hero-eyebrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+            <path d="m6.3 6.3 2.1 2.1M15.6 15.6l2.1 2.1M17.7 6.3l-2.1 2.1M8.4 15.6l-2.1 2.1" />
+          </svg>
+          Rang xay mỗi ngày
+        </span>
+        <h1 id="hero-title">Một ngày nhẹ hơn,<br />bắt đầu từ <em>một ly ngon</em>.</h1>
+        <p class="hero-sub">Đồ uống pha trong ngày và ăn vặt nóng giòn — chọn món yêu thích, thêm vào giỏ và nhận tại quầy.</p>
+        <div class="hero-actions">
+          <a class="btn btn--accent" href="#menu">
+            Khám phá thực đơn
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </a>
+          <a class="btn btn--ghost" href="orders.html">Xem đơn của tôi</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>15</strong><span>Món trong menu</span></div>
+          <div class="hero-stat"><strong>10</strong><span>Đồ uống</span></div>
+          <div class="hero-stat"><strong>5</strong><span>Ăn vặt</span></div>
+        </div>
       </div>
-      <div class="category-filter" id="category-filter" role="group" aria-label="Lọc theo danh mục"></div>
-    </div>
 
-    <section id="menu-content" aria-live="polite" aria-busy="true"></section>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-photo hero-photo--1"><img src="images/image1.jpeg" alt="" /></div>
+        <div class="hero-photo hero-photo--2"><img src="images/tra-dao.jpg" alt="" /></div>
+        <div class="hero-photo hero-photo--3"><img src="images/ga-ran.jpg" alt="" /></div>
+        <div class="hero-card">
+          <span class="hero-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m20 6-11 11-5-5" />
+            </svg>
+          </span>
+          <div>
+            <strong>Pha trong ngày</strong>
+            <span>Nguyên liệu tươi mới</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu" aria-labelledby="menu-heading">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Thực đơn hôm nay</p>
+          <h2 class="section-title" id="menu-heading">Chọn món bạn thích</h2>
+        </div>
+        <p class="section-sub">Thêm nhanh size M · Thanh toán tại quầy</p>
+      </div>
+
+      <div class="menu-toolbar">
+        <div class="search">
+          <span class="search__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m16.5 16.5 4.5 4.5" />
+            </svg>
+          </span>
+          <label class="visually-hidden" for="search-input">Tìm món</label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Tìm món… vd: cà phê, trà đào"
+            autocomplete="off"
+          />
+          <button class="search__clear" id="search-clear" type="button" aria-label="Xóa từ khóa" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+          <kbd>/</kbd>
+        </div>
+        <div class="category-filter" id="category-filter" role="group" aria-label="Lọc theo danh mục"></div>
+      </div>
+
+      <div class="results-meta">
+        <span id="results-text">Đang tải thực đơn…</span>
+        <button class="link-btn" id="reset-filters" type="button" hidden>Xóa bộ lọc</button>
+      </div>
+
+      <section id="menu-content" aria-live="polite" aria-busy="true"></section>
+    </section>
   </main>
 
   <footer class="site-footer">
-    BrewLite · Đồ uống &amp; ăn vặt — Demo frontend (Task 3 + Task 9)
+    <div class="site-footer__inner">
+      <div class="footer-brand">
+        <a class="logo" href="index.html" aria-label="BrewLite — trang chủ">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 8h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V8Z" />
+              <path d="M16 9h1.8a3 3 0 0 1 0 6H16" />
+              <path d="M8 3v2M12 3v2" />
+            </svg>
+          </span>
+          <span class="logo__text">BrewLite<span class="logo__tag">Coffee &amp; Snacks</span></span>
+        </a>
+        <p>Đồ uống &amp; ăn vặt pha chế trong ngày. Chọn nhanh, nhận tại quầy — nhẹ nhàng như một buổi sáng đẹp trời.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Khám phá</h3>
+        <a href="index.html">Thực đơn</a>
+        <a href="orders.html">Đơn của tôi</a>
+        <a href="#menu">Đồ uống</a>
+      </div>
+      <div class="footer-col">
+        <h3>Liên hệ</h3>
+        <span>123 Đường Cà Phê, Quận 1</span>
+        <span>07:00 – 22:00 hằng ngày</span>
+        <span>hello@brewlite.demo</span>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BrewLite. Demo frontend.</span>
+        <span>HTML, CSS &amp; JavaScript thuần</span>
+      </div>
+    </div>
   </footer>
+
+  <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+    <div class="cart-dialog__head">
+      <div>
+        <p class="eyebrow">Giỏ của bạn</p>
+        <h2 id="cart-title">Món đã chọn</h2>
+      </div>
+      <button class="icon-btn" type="button" data-cart-close aria-label="Đóng giỏ hàng">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18" />
+        </svg>
+      </button>
+    </div>
+    <div class="cart-dialog__body" id="cart-items"></div>
+    <div class="cart-dialog__foot" id="cart-foot" hidden></div>
+  </dialog>
 
   <script src="js/data.js"></script>
   <script src="js/utils.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/menu.js"></script>
 </body>
 </html>
